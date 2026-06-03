@@ -1,3 +1,5 @@
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama import ChatOllama
+
 llm = ChatOllama(model="phi3:mini")
-print(llm.invoke("Hola, ¿qué puedes hacer?"))
+response = llm.invoke("Hola, ¿qué puedes hacer?")
+print(response.content)
